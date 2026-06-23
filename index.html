@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EMPIRE NOKAM — Société multisectorielle à Douala : Import-Export, Commerce Général, Prestations de Services. N° RCCM RC/DLA/2022/A/2981.">
+<meta property="og:title" content="EMPIRE NOKAM — Douala, Cameroun">
+<meta property="og:description" content="Société immatriculée à Douala, spécialisée en Import-Export, Commerce Général et Prestations de Services.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏪</text></svg>">
+<title>EMPIRE NOKAM — Import-Export · Commerce · Prestations de Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Cinzel:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --or:#C49A3C;
+  --or2:#E8C96A;
+  --noir:#0A0A0A;
+  --noir2:#111111;
+  --gris:#1C1C1C;
+  --gris2:#2A2A2A;
+  --ivoire:#F2EDE4;
+  --sable:#D4C5A9;
+  --vert:#1A2E1A;
+  --texte:#E8E0D0;
+  --doux:#8A7D6A;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--noir);color:var(--texte);overflow-x:hidden;line-height:1.6}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.4rem 5rem;
+  background:rgba(10,10,10,0.96);
+  border-bottom:1px solid rgba(196,154,60,0.15);
+  backdrop-filter:blur(20px);
+}
+.nav-brand{display:flex;flex-direction:column;text-decoration:none}
+.nav-brand-top{
+  font-family:'Cinzel',serif;
+  font-size:1rem;font-weight:700;letter-spacing:0.2em;
+  color:var(--or);text-decoration:none;
+  text-transform:uppercase;
+}
+.nav-brand-sub{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--doux)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{
+  font-size:0.78rem;font-weight:500;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--doux);
+  text-decoration:none;transition:color 0.3s;
+}
+.nav-links a:hover{color:var(--or)}
+.nav-cta{background:var(--or)!important;color:var(--noir)!important;padding:0.6rem 1.4rem!important;font-weight:600!important;transition:background 0.3s!important}
+.nav-cta:hover{background:var(--or2)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:0.3rem}
+.burger span{width:24px;height:2px;background:var(--or);transition:all 0.3s;display:block}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  display:none;position:fixed;top:68px;left:0;right:0;z-index:199;
+  background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);
+  flex-direction:column;padding:2rem;gap:1.5rem;
+  border-bottom:1px solid rgba(196,154,60,0.2);
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1rem;color:var(--texte);text-decoration:none;letter-spacing:0.08em;padding:0.5rem 0;border-bottom:1px solid rgba(196,154,60,0.08)}
+.mobile-menu a:last-child{color:var(--or);font-weight:600;border-bottom:none}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:8rem 5rem 5rem;
+  position:relative;overflow:hidden;gap:4rem;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 80% at 100% 50%,rgba(26,46,26,0.4) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 50% at 0% 100%,rgba(196,154,60,0.08) 0%,transparent 50%);
+}
+.hero-pattern{
+  position:absolute;top:0;right:0;width:50%;height:100%;
+  background-image:repeating-linear-gradient(45deg,rgba(196,154,60,0.03) 0px,rgba(196,154,60,0.03) 1px,transparent 1px,transparent 12px);
+}
+.hero-left{position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  background:rgba(196,154,60,0.1);border:1px solid rgba(196,154,60,0.3);
+  padding:0.4rem 1rem;font-size:0.7rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--or);margin-bottom:2rem;
+}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--or);border-radius:50%}
+.hero h1{
+  font-family:'Cinzel',serif;
+  font-size:clamp(2.4rem,5.5vw,5rem);
+  font-weight:900;line-height:1.05;letter-spacing:0.08em;color:var(--ivoire);margin-bottom:0.2rem;
+  text-transform:uppercase;
+}
+.hero h1 span{
+  display:block;
+  font-family:'Cormorant',serif;
+  font-style:italic;font-weight:300;
+  color:var(--or);font-size:0.5em;
+  letter-spacing:0.18em;margin-top:0.4rem;
+  text-transform:none;
+}
+.hero-desc{font-size:1rem;font-weight:300;color:var(--sable);line-height:1.8;max-width:480px;margin:2rem 0 2.5rem}
+.hero-desc strong{color:var(--or);font-weight:600}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{
+  background:var(--or);color:var(--noir);padding:0.9rem 2rem;
+  font-size:0.8rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;text-decoration:none;transition:all 0.3s;display:inline-block;
+}
+.btn-primary:hover{background:var(--or2);transform:translateY(-2px)}
+.btn-ghost{
+  border:1px solid rgba(196,154,60,0.4);color:var(--or);padding:0.9rem 2rem;
+  font-size:0.8rem;font-weight:600;letter-spacing:0.12em;
+  text-transform:uppercase;text-decoration:none;transition:all 0.3s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--or);background:rgba(196,154,60,0.08)}
+.hero-right{
+  position:relative;z-index:1;display:flex;flex-direction:column;gap:1px;
+  border:1px solid rgba(196,154,60,0.15);
+}
+.hero-stat-card{
+  background:rgba(28,28,28,0.8);padding:2rem 2.5rem;
+  border-bottom:1px solid rgba(196,154,60,0.1);transition:background 0.3s;
+}
+.hero-stat-card:last-child{border-bottom:none}
+.hero-stat-card:hover{background:rgba(42,42,42,0.9)}
+.hero-stat-num{font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;color:var(--or);line-height:1;letter-spacing:0.05em}
+.hero-stat-label{font-size:0.8rem;color:var(--sable);margin-top:0.3rem;letter-spacing:0.05em}
+.hero-stat-sub{font-size:0.72rem;color:var(--doux);margin-top:0.2rem}
+
+/* BRANCHES */
+.groupe{padding:8rem 5rem;background:var(--noir2)}
+.section-eyebrow{
+  font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--or);
+  display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;
+}
+.section-eyebrow::after{content:'';flex:1;max-width:60px;height:1px;background:var(--or);opacity:0.4}
+.section-title{
+  font-family:'Cormorant',serif;font-size:clamp(2.2rem,4vw,3.2rem);
+  font-weight:600;line-height:1.15;color:var(--ivoire);margin-bottom:1rem;
+  letter-spacing:0.02em;
+}
+.section-title em{font-style:italic;color:var(--or)}
+.section-intro{font-size:0.95rem;color:var(--sable);max-width:600px;line-height:1.8;margin-bottom:4rem}
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.branch{
+  position:relative;overflow:hidden;
+  border:1px solid rgba(196,154,60,0.1);margin:-1px 0 0 -1px;
+  padding:3rem 2.5rem;transition:background 0.4s;
+}
+.branch:hover{background:var(--gris)}
+.branch-number{
+  font-family:'Cinzel',serif;font-size:5rem;font-weight:900;
+  color:rgba(196,154,60,0.07);line-height:1;position:absolute;top:1.5rem;right:1.5rem;
+}
+.branch-icon{font-size:2.2rem;margin-bottom:1.5rem;display:block}
+.branch-tag{
+  font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--or);
+  margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem;
+}
+.branch-tag::before{content:'';width:20px;height:1px;background:var(--or)}
+.branch h3{font-family:'Cormorant',serif;font-size:1.7rem;font-weight:600;color:var(--ivoire);margin-bottom:1rem;line-height:1.2;letter-spacing:0.03em}
+.branch p{font-size:0.88rem;color:var(--sable);line-height:1.75;margin-bottom:1.5rem}
+.branch-link{
+  display:inline-flex;align-items:center;gap:0.5rem;color:var(--or);
+  font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  text-decoration:none;transition:gap 0.3s;margin-top:0.5rem;
+}
+.branch-link:hover{gap:0.8rem}
+.branch-accent{position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--or);transition:width 0.5s}
+.branch:hover .branch-accent{width:100%}
+
+/* À PROPOS */
+.apropos{padding:8rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:center}
+.apropos-visual{position:relative}
+.apropos-box-main{background:var(--gris);border:1px solid rgba(196,154,60,0.15);padding:3.5rem}
+.apropos-box-main h3{font-family:'Cormorant',serif;font-size:1.5rem;font-weight:600;color:var(--ivoire);margin-bottom:1.5rem;letter-spacing:0.04em}
+.apropos-items{display:flex;flex-direction:column;gap:1rem}
+.apropos-item{display:flex;align-items:center;gap:1rem;padding:0.8rem 0;border-bottom:1px solid rgba(196,154,60,0.08)}
+.apropos-item:last-child{border-bottom:none}
+.apropos-item-dot{width:8px;height:8px;background:var(--or);flex-shrink:0}
+.apropos-item-text{font-size:0.88rem;color:var(--sable)}
+.apropos-box-badge{
+  position:absolute;top:-1.5rem;right:-1.5rem;background:var(--or);
+  padding:1.5rem;display:flex;flex-direction:column;align-items:center;
+}
+.apropos-box-badge-num{font-family:'Cinzel',serif;font-size:1.8rem;font-weight:700;color:var(--noir);line-height:1}
+.apropos-box-badge-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(0,0,0,0.6);margin-top:0.2rem;text-align:center}
+.apropos-text p{font-size:0.95rem;color:var(--sable);line-height:1.85;margin-bottom:1.2rem}
+.apropos-text p strong{color:var(--or);font-weight:600}
+
+/* VALEURS */
+.valeurs{padding:8rem 5rem;background:var(--vert);position:relative;overflow:hidden}
+.valeurs::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(-45deg,rgba(196,154,60,0.02) 0,rgba(196,154,60,0.02) 1px,transparent 1px,transparent 20px);
+}
+.valeurs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;position:relative;z-index:1}
+.valeur{padding:2.5rem 2rem;border:1px solid rgba(196,154,60,0.15);background:rgba(10,10,10,0.4);transition:background 0.4s}
+.valeur:hover{background:rgba(10,10,10,0.7)}
+.valeur-icon{font-size:2rem;margin-bottom:1.5rem;display:block}
+.valeur h4{font-family:'Cormorant',serif;font-size:1.4rem;font-weight:600;color:var(--ivoire);margin-bottom:0.8rem;letter-spacing:0.04em}
+.valeur p{font-size:0.87rem;color:var(--sable);line-height:1.75}
+
+/* CONTACT */
+.contact{padding:8rem 5rem;background:var(--noir2)}
+.contact-inner{max-width:750px;margin:0 auto}
+.contact-list{
+  list-style:none;margin-top:3rem;
+  border:1px solid rgba(196,154,60,0.15);
+}
+.contact-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.4rem 2rem;
+  border-bottom:1px solid rgba(196,154,60,0.08);
+  transition:background 0.3s;gap:2rem;
+}
+.contact-row:last-child{border-bottom:none}
+.contact-row:hover{background:var(--gris)}
+.contact-row-left{
+  display:flex;align-items:center;gap:1rem;flex-shrink:0;
+}
+.contact-row-icon{font-size:1.1rem}
+.contact-row-label{
+  font-size:0.72rem;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--or);font-weight:600;
+}
+.contact-row-val{
+  font-size:0.9rem;color:var(--sable);text-align:right;
+}
+.contact-row-link{
+  font-size:0.9rem;color:var(--or);
+  text-decoration:none;text-align:right;
+  transition:opacity 0.2s;font-weight:500;
+}
+.contact-row-link:hover{opacity:0.75}
+.contact-row-cta{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--or);color:var(--noir);
+  padding:0.55rem 1.1rem;
+  font-size:0.75rem;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;text-decoration:none;
+  transition:all 0.3s;flex-shrink:0;
+}
+.contact-row-cta:hover{background:var(--or2);color:var(--noir)}
+
+/* FOOTER */
+footer{background:var(--noir2);border-top:1px solid rgba(196,154,60,0.12);padding:4rem 5rem 2rem}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(196,154,60,0.08)}
+.footer-brand p{font-size:0.85rem;color:var(--doux);line-height:1.75;margin-top:1rem;max-width:300px}
+.footer-brand-name{font-family:'Cinzel',serif;font-size:1.2rem;font-weight:700;color:var(--or);letter-spacing:0.18em;text-transform:uppercase}
+.footer-brand-sub{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--doux);margin-top:0.1rem}
+.footer-col h5{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:1.2rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
+.footer-col ul li a{font-size:0.85rem;color:var(--doux);text-decoration:none;transition:color 0.3s}
+.footer-col ul li a:hover{color:var(--or)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between}
+.footer-copy{font-size:0.78rem;color:var(--doux)}
+.footer-loc{font-size:0.78rem;color:var(--doux);text-align:right}
+
+.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(196,154,60,0.3),transparent)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .burger{display:flex}
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding:7rem 1.5rem 4rem;gap:3rem}
+  .hero-right{display:none}
+  .branches{grid-template-columns:1fr}
+  .apropos{grid-template-columns:1fr;gap:3rem;padding:5rem 1.5rem}
+  .apropos-box-badge{display:none}
+  .valeurs,.groupe{padding:5rem 1.5rem}
+  .valeurs-grid{grid-template-columns:1fr}
+  .contact{padding:5rem 1.5rem}
+  .footer-top{grid-template-columns:1fr;gap:2rem}
+  footer{padding:3rem 1.5rem 2rem}
+  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
+  .footer-loc{text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.fb-btn{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  margin-top:1.2rem;
+  background:rgba(196,154,60,0.08);
+  border:1px solid rgba(196,154,60,0.3);
+  color:var(--or);
+  padding:0.65rem 1.2rem;
+  font-size:0.75rem;font-weight:600;letter-spacing:0.1em;
+  text-transform:uppercase;text-decoration:none;
+  transition:all 0.3s;
+}
+.fb-btn:hover{background:var(--or);color:var(--noir);border-color:var(--or)}
+.fb-btn svg{transition:transform 0.3s;flex-shrink:0}
+.fb-btn:hover svg{transform:scale(1.15)}
+a { color: var(--or); }
+a:visited { color: var(--or); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+    <span class="nav-brand-top">EMPIRE NOKAM</span>
+    <span class="nav-brand-sub">N° RCCM : RC/DLA/2022/A/2981</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#apropos">Le groupe</a></li>
+    <li><a href="#groupe">Nos branches</a></li>
+    <li><a href="#valeurs">Valeurs</a></li>
+    <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#apropos" onclick="closeMenu()">Le groupe</a>
+  <a href="#groupe" onclick="closeMenu()">Nos branches</a>
+  <a href="#valeurs" onclick="closeMenu()">Valeurs</a>
+  <a href="#contact" onclick="closeMenu()">Nous contacter</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-left">
+    <h1>EMPIRE NOKAM<span>Un groupe, plusieurs forces</span></h1>
+    <p class="hero-desc">Immatriculée le <strong>18 mai 2022</strong> sous le N° RCCM <strong>RC/DLA/2022/A/2981</strong>, EMPIRE NOKAM est une société constituée de plusieurs branches d'activité complémentaires. Une structure solide, légalement enregistrée et fiscalement conforme.</p>
+    <div class="hero-actions">
+      <a href="#groupe" class="btn-primary">Découvrir nos branches</a>
+      <a href="#contact" class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Nous contacter</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat-card">
+      <div class="hero-stat-num">2022</div>
+      <div class="hero-stat-label">Année d'immatriculation</div>
+      <div class="hero-stat-sub">Enregistrée au RCCM le 18/05/2022</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="hero-stat-num">3</div>
+      <div class="hero-stat-label">Branches d'activité</div>
+      <div class="hero-stat-sub">Import-Export · Commerce · Prestations</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="hero-stat-num">100%</div>
+      <div class="hero-stat-label">Conformité légale & fiscale</div>
+      <div class="hero-stat-sub">N° RC/DLA/2022/A/2981</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="hero-stat-num">CMR</div>
+      <div class="hero-stat-label">Ancrage local fort</div>
+      <div class="hero-stat-sub">Douala-Deido, Cameroun</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BRANCHES -->
+<section class="groupe" id="groupe">
+  <div class="section-eyebrow">Nos branches</div>
+  <h2 class="section-title">Un groupe, <em>trois expertises</em></h2>
+  <p class="section-intro">EMPIRE NOKAM est une société constituée de plusieurs actifs opérationnels, chacun spécialisé dans un secteur stratégique. Ensemble, ils forment un écosystème d'affaires solide et complémentaire.</p>
+  <div class="branches">
+    <div class="branch">
+      <div class="branch-number">01</div>
+      <span class="branch-icon">🌍</span>
+      <div class="branch-tag">Branche 1</div>
+      <h3>Import · Export</h3>
+      <p>Nous facilitons les échanges commerciaux entre le Cameroun et le marché international. Gestion complète des opérations d'importation et d'exportation, sourcing de produits et logistique.</p>
+      <div class="branch-accent"></div>
+    </div>
+    <div class="branch">
+      <div class="branch-number">02</div>
+      <span class="branch-icon">🍽️</span>
+      <div class="branch-tag">Branche 2</div>
+      <h3>Services Traiteurs</h3>
+      <p>Prestations traiteur haut de gamme pour événements professionnels et privés. Mariages, réceptions d'entreprise, cérémonies — avec le savoir-faire de la tradition camerounaise.</p>
+      <a href="https://www.facebook.com/share/18qoRoMF4A/?mibextid=wwXIfr" target="_blank" class="fb-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Voir sur Facebook
+      </a>
+      <div class="branch-accent"></div>
+    </div>
+    <div class="branch">
+      <div class="branch-number">03</div>
+      <span class="branch-icon">🏪</span>
+      <div class="branch-tag">Branche 3</div>
+      <h3>Commerce Général & Prestations</h3>
+      <p>Distribution et négoce de biens de consommation, produits locaux et marchandises diverses. Réseau de fournisseurs et partenaires fiables sur l'ensemble du territoire.</p>
+      <a href="https://www.facebook.com/share/1Dqtqen4Pb/?mibextid=wwXIfr" target="_blank" class="fb-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Voir sur Facebook
+      </a>
+      <div class="branch-accent"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- À PROPOS -->
+<section class="apropos" id="apropos">
+  <div class="apropos-visual">
+    <div class="apropos-box-main">
+      <h3>Conformité & Légitimité</h3>
+      <div class="apropos-items">
+        <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Registre de commerce — enregistrement légal officiel</div></div>
+        <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Attestation d'immatriculation officielle</div></div>
+        <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Attestation de conformité fiscale</div></div>
+        <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Cotisations CNPS enregistrées</div></div>
+        <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Immatriculée le 18/05/2022 · N° RC/DLA/2022/A/2981</div></div>
+      </div>
+    </div>
+    <div class="apropos-box-badge">
+      <div class="apropos-box-badge-num">2022</div>
+      <div class="apropos-box-badge-label">Immatr.<br>RCCM</div>
+    </div>
+  </div>
+  <div class="apropos-text">
+    <div class="section-eyebrow">Le groupe</div>
+    <h2 class="section-title">EMPIRE NOKAM, société <em>multisectorielle</em> enregistrée à Douala</h2>
+    <p>EMPIRE NOKAM (N° RCCM : RC/DLA/2022/A/2981) est une <strong>société constituée de plusieurs actifs complémentaires</strong>, opérant dans des secteurs stratégiques de l'économie camerounaise. Établie à Douala-Deido, l'entreprise bénéficie d'un ancrage local fort et d'un réseau étendu.</p>
+    <p>Sa structure multisectorielle lui confère une <strong>résilience et une capacité d'adaptation</strong> unique : chaque branche opère de manière autonome tout en bénéficiant des synergies du groupe.</p>
+    <p>Légalement enregistrée, fiscalement conforme et socialement déclarée auprès de la <strong>CNPS</strong>, EMPIRE NOKAM incarne un modèle d'entreprise africaine rigoureuse et tournée vers l'avenir.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VALEURS -->
+<section class="valeurs" id="valeurs">
+  <div class="section-eyebrow" style="position:relative;z-index:1">Ce qui nous guide</div>
+  <h2 class="section-title" style="position:relative;z-index:1">Nos <em>valeurs</em></h2>
+  <div class="valeurs-grid">
+    <div class="valeur"><span class="valeur-icon">🤝</span><h4>Intégrité</h4><p>Honnêteté et transparence dans chacune de nos transactions, en respectant nos engagements envers nos clients, partenaires et employés.</p></div>
+    <div class="valeur"><span class="valeur-icon">⭐</span><h4>Excellence</h4><p>Qualité irréprochable dans chacune de nos branches d'activité, qu'il s'agisse du commerce, de la logistique ou des services traiteurs.</p></div>
+    <div class="valeur"><span class="valeur-icon">🌱</span><h4>Enracinement</h4><p>Profondément ancrés à Douala, nous construisons des relations durables fondées sur la confiance et la compréhension des réalités locales.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-eyebrow">Nous rejoindre</div>
+    <h2 class="section-title">Travaillons <em>ensemble</em></h2>
+    <ul class="contact-list">
+
+      <li class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-row-icon">📍</span>
+          <span class="contact-row-label">Adresse</span>
+        </div>
+        <span class="contact-row-val">Douala-Deido, Cameroun</span>
+      </li>
+
+      <li class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-row-icon">🕐</span>
+          <span class="contact-row-label">Disponibilité</span>
+        </div>
+        <span class="contact-row-val">Lundi – Samedi, 8h00 – 18h00</span>
+      </li>
+
+      <li class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-row-icon">✉️</span>
+          <span class="contact-row-label">Email</span>
+        </div>
+        <a href="mailto:contact@empirenokam.com" class="contact-row-link">contact@empirenokam.com</a>
+      </li>
+
+      <li class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-row-icon">📞</span>
+          <span class="contact-row-label">Téléphone</span>
+        </div>
+        <span class="contact-row-val">+237 697 290 668</span>
+      </li>
+
+
+
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">EMPIRE NOKAM</div>
+      <div class="footer-brand-sub">N° RCCM : RC/DLA/2022/A/2981 · Douala-Deido</div>
+      <p>Société constituée de plusieurs branches d'activité complémentaires, immatriculée à Douala le 18 mai 2022. Import-Export · Commerce Général · Prestations de Services.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Branches</h5>
+      <ul>
+        <li><a href="#groupe">Import · Export</a></li>
+        <li><a href="#groupe">Services Traiteurs</a></li>
+        <li><a href="#groupe">Commerce Général</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+237697290668">+237 697 290 668</a></li>
+        <li><a href="https://wa.me/237697290668" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contact@empirenokam.com">contact@empirenokam.com</a></li>
+        <li><a href="#apropos">Douala-Deido, Cameroun</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2022–2026 Empire Nokam · Tous droits réservés</div>
+    <div class="footer-loc">Douala-Deido · Cameroun · RC/DLA/2022/A/2981</div>
+  </div>
+</footer>
+<!-- BULLE WHATSAPP FLOTTANTE -->
+<a href="https://wa.me/237697290668" target="_blank" class="wa-bubble" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.121 1.532 5.856L.054 23.447a.5.5 0 0 0 .499.553h.056l5.759-1.505A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.9 9.9 0 0 1-5.031-1.371l-.36-.214-3.733.976.999-3.638-.235-.374A9.869 9.869 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.466 0 9.9 4.434 9.9 9.9 0 5.466-4.434 9.9-9.9 9.9z"/>
+  </svg>
+</a>
+
+<style>
+.wa-bubble{
+  position:fixed;bottom:2rem;right:2rem;z-index:999;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,0.4);
+  transition:transform 0.3s,box-shadow 0.3s;
+  animation:waPulse 2.5s infinite;
+}
+.wa-bubble:hover{
+  transform:scale(1.1);
+  box-shadow:0 6px 28px rgba(37,211,102,0.6);
+  color:white;
+}
+@keyframes waPulse{
+  0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}
+  50%{box-shadow:0 4px 30px rgba(37,211,102,0.7)}
+}
+</style>
+
+<script>
+function toggleMenu(){
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('burger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id'); });
+  navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#'+current ? 'var(--or)' : ''; });
+});
+document.addEventListener('click', e => {
+  if(!e.target.closest('nav') && !e.target.closest('.mobile-menu')) closeMenu();
+});
+</script>
+</body>
+</html>
