@@ -7,6 +7,29 @@
 <meta property="og:title" content="EMPIRE NOKAM — Douala, Cameroun">
 <meta property="og:description" content="Société immatriculée à Douala, spécialisée en Import-Export, Commerce Général et Prestations de Services.">
 <meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "EMPIRE NOKAM",
+  "description": "Société multisectorielle à Douala : Import-Export, Commerce Général, Prestations de Services.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Boulevard de la Liberté, Rond Point Deido",
+    "addressLocality": "Douala",
+    "addressCountry": "CM"
+  },
+  "telephone": ["+237653561066", "+237657533069"],
+  "email": "contact@empirenokam.com",
+  "foundingDate": "2022-05-18",
+  "taxID": "P128817368744Y",
+  "vatID": "RC/DLA/2022/A/2981",
+  "sameAs": [
+    "https://www.facebook.com/share/18qoRoMF4A/?mibextid=wwXIfr",
+    "https://www.facebook.com/share/1Dqtqen4Pb/?mibextid=wwXIfr"
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏪</text></svg>">
 <title>EMPIRE NOKAM — Import-Export · Commerce · Prestations de Services</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Cinzel:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -255,6 +278,13 @@ nav{
   transition:all 0.3s;flex-shrink:0;
 }
 .contact-row-cta:hover{background:var(--or2);color:var(--noir)}
+.contact-map{
+  margin-top:1.5rem;border:1px solid rgba(196,154,60,0.15);
+  filter:grayscale(0.3) contrast(1.05);
+  aspect-ratio:16/6;
+}
+.contact-map iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:900px){.contact-map{aspect-ratio:4/3}}
 
 /* FOOTER */
 footer{background:var(--noir2);border-top:1px solid rgba(196,154,60,0.12);padding:4rem 5rem 2rem}
@@ -348,24 +378,24 @@ a:visited { color: var(--or); }
   </div>
   <div class="hero-right">
     <div class="hero-stat-card">
-      <div class="hero-stat-num">2022</div>
+      <div class="hero-stat-num" data-count="2022">0</div>
       <div class="hero-stat-label">Année d'immatriculation</div>
       <div class="hero-stat-sub">Enregistrée au RCCM le 18/05/2022</div>
     </div>
     <div class="hero-stat-card">
-      <div class="hero-stat-num">3</div>
+      <div class="hero-stat-num" data-count="3">0</div>
       <div class="hero-stat-label">Branches d'activité</div>
       <div class="hero-stat-sub">Import-Export · Commerce · Prestations</div>
     </div>
     <div class="hero-stat-card">
-      <div class="hero-stat-num">100%</div>
+      <div class="hero-stat-num"><span data-count="100" data-suffix="%">0</span></div>
       <div class="hero-stat-label">Conformité légale & fiscale</div>
-      <div class="hero-stat-sub">N° RC/DLA/2022/A/2981</div>
+      <div class="hero-stat-sub">RCCM · NIU · CNPS à jour</div>
     </div>
     <div class="hero-stat-card">
-      <div class="hero-stat-num">CMR</div>
-      <div class="hero-stat-label">Ancrage local fort</div>
-      <div class="hero-stat-sub">Douala-Deido, Cameroun</div>
+      <div class="hero-stat-num" style="font-size:1.5rem;letter-spacing:0.02em">Deido</div>
+      <div class="hero-stat-label">Siège social</div>
+      <div class="hero-stat-sub">Bd de la Liberté, Rond Point Deido</div>
     </div>
   </div>
 </section>
@@ -422,6 +452,7 @@ a:visited { color: var(--or); }
       <h3>Conformité & Légitimité</h3>
       <div class="apropos-items">
         <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Registre de commerce — enregistrement légal officiel</div></div>
+        <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">NIU : P128817368744Y — Direction Générale des Impôts</div></div>
         <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Attestation d'immatriculation officielle</div></div>
         <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Attestation de conformité fiscale</div></div>
         <div class="apropos-item"><div class="apropos-item-dot"></div><div class="apropos-item-text">Cotisations CNPS enregistrées</div></div>
@@ -469,7 +500,7 @@ a:visited { color: var(--or); }
           <span class="contact-row-icon">📍</span>
           <span class="contact-row-label">Adresse</span>
         </div>
-        <span class="contact-row-val">Douala-Deido, Cameroun</span>
+        <span class="contact-row-val">Bd de la Liberté, Rond Point Deido, Douala</span>
       </li>
 
       <li class="contact-row">
@@ -490,15 +521,21 @@ a:visited { color: var(--or); }
 
       <li class="contact-row">
         <div class="contact-row-left">
-          <span class="contact-row-icon">📞</span>
-          <span class="contact-row-label">Téléphone</span>
+          <span class="contact-row-icon">📱</span>
+          <span class="contact-row-label">Direction</span>
         </div>
         <span class="contact-row-val">+237 697 290 668</span>
       </li>
 
-
-
     </ul>
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps?q=Rond+Point+Dieido,+Boulevard+de+la+Liberte,+Douala,+Cameroun&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localisation EMPIRE NOKAM — Rond Point Deido, Douala">
+      </iframe>
+    </div>
   </div>
 </section>
 
@@ -521,16 +558,16 @@ a:visited { color: var(--or); }
     <div class="footer-col">
       <h5>Contact</h5>
       <ul>
-        <li><a href="tel:+237697290668">+237 697 290 668</a></li>
+        <li><a href="tel:+237653561066">653 56 10 66</a></li>
         <li><a href="https://wa.me/237697290668" target="_blank">WhatsApp</a></li>
         <li><a href="mailto:contact@empirenokam.com">contact@empirenokam.com</a></li>
-        <li><a href="#apropos">Douala-Deido, Cameroun</a></li>
+        <li><a href="#contact">Bd de la Liberté, Rond Point Deido</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2022–2026 Empire Nokam · Tous droits réservés</div>
-    <div class="footer-loc">Douala-Deido · Cameroun · RC/DLA/2022/A/2981</div>
+    <div class="footer-copy">© 2026 Empire Nokam · Tous droits réservés</div>
+    <div class="footer-loc">Rond Point Deido · Douala · RC/DLA/2022/A/2981</div>
   </div>
 </footer>
 <!-- BULLE WHATSAPP FLOTTANTE -->
@@ -581,6 +618,32 @@ window.addEventListener('scroll', () => {
 document.addEventListener('click', e => {
   if(!e.target.closest('nav') && !e.target.closest('.mobile-menu')) closeMenu();
 });
+
+// Compteurs animés sur les vraies statistiques (année, branches, conformité)
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const counters = document.querySelectorAll('[data-count]');
+function animateCount(el){
+  const target = parseInt(el.getAttribute('data-count'), 10);
+  const suffix = el.getAttribute('data-suffix') || '';
+  if(reduceMotion){ el.textContent = target + suffix; return; }
+  const duration = 1200, start = performance.now();
+  function tick(now){
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * eased) + suffix;
+    if(p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      animateCount(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObserver.observe(c));
 </script>
 </body>
 </html>
